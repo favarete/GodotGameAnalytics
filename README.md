@@ -7,6 +7,7 @@ The module works only on Android and has been tested with Godot-2.1.2-stable.
 
 ## Available Features
 > Design Event; 
+
 > Session Handling.
 
 ## Build/Compile module
