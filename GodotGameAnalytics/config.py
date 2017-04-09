@@ -7,10 +7,6 @@ def configure(env):
 		env.android_add_to_permissions("android/AndroidPermissionsChunk.xml")
 		env.android_add_java_dir("android/src")
 		env.android_add_dependency("compile files('../../../modules/GodotGameAnalytics/android/lib//gameanalytics.jar')")
-		#env.android_add_dependency("compile 'com.google.android.gms:play-services-base:9.4.0'")
-		#env.android_add_dependency("compile 'com.android.support:appcompat-v7:24.2.0'")
 		env.android_add_dependency("compile 'com.google.android.gms:play-services-basement:8.4.0'")
-    	env.android_add_dependency("compile 'com.google.android.gms:play-services-ads:8.4.0'")
-    	env.android_add_dependency("compile 'com.android.support:appcompat-v7:23.1.1'")
-		#env.disable_module()
-
+		env.android_add_dependency("compile 'com.google.android.gms:play-services-ads:8.4.0'")
+		env.android_add_dependency("compile 'com.android.support:appcompat-v7:23.1.1'")
