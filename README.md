@@ -6,7 +6,7 @@ This is an implementation of the [GameAnalytics](http://www.gameanalytics.com/) 
 The module works only on Android and has been tested with Godot-2.1.2-stable.
 
 ## Available Features
-> Design Event;
+> Design Event; 
 > Session Handling.
 
 ## Build/Compile module
