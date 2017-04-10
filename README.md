@@ -12,7 +12,7 @@ The module works only on Android and has been tested with Godot-2.1.2-stable.
 
 > Session Handling.
 
-## Build/Compile module
+## Build/Compile Module
 1. Copy the "GodotGameAnalytics" folder to the *modules* folder inside of Godot source code;
 2. Compile the Android Export Templates. [[docs]](http://docs.godotengine.org/en/stable/reference/compiling_for_android.html)
 
@@ -27,6 +27,7 @@ modules="org/godotengine/godot/GodotGameAnalytics"
 
 ## Initialize GodotGameAnalytics
 To to use the module functions on your scripts, start the module as follows: 
+
 (You can [Sign Up](https://go.gameanalytics.com/signup) for free to get the keys).
 
 ```GDScript
@@ -73,7 +74,7 @@ ___
 ```GDScript
 void sendCustomEvent(String stringHierarchy)
 ```
-The *stringHierarchy* is a string that can consist of 1-5 segments separated by ':'.  
+The *stringHierarchy* is a String that can consist of 1-5 segments separated by ':'.  
 Each segment can have a max length of 32. 
 Eg: "Kill:Sword:Robot"
 
@@ -97,8 +98,7 @@ void progressionStart_1(String progression01)
 void progressionStart_2(String progression01, String progression02)
 void progressionStart_3(String progression01, String progression02, String progression03)
 ```
-Use this when a player is starting a progression attempt. The functions gives option to use from 1 to 3 parameters
-that represents the progression start in you game. 
+Use this when a player initiates an attempt to progress the game. The functions give you the option to use from 1 to 3 parameters that represent the beginning of the progression in your game. 
 
 
 **Progression Event Fail**
@@ -109,7 +109,7 @@ void progressionFail_2(String progression01, String progression02)
 void progressionFail_3(String progression01, String progression02, String progression03)
 void progressionFail_3_WithInt(String progression01, String progression02, String progression03, int score)
 ```
-Use this when a player fails the attempt. When using a 3 tier hierarchy structure you've the option to use a function with only Strings or to use a function with 3 Strings and an aditional integer (to represent a score value, for example). 
+Use this when the player fails the attempt to progress. When using a three-tier structure you have the option to use a function of Strings only or a function composed of Strings and an integer value (to represent a score, for example). 
 
 
 **Progression Event Complete**
@@ -120,7 +120,7 @@ void progressionFail_2(String progression01, String progression02)
 void progressionFail_3(String progression01, String progression02, String progression03)
 void progressionFail_3_WithInt(String progression01, String progression02, String progression03, int score)
 ```
-Use this when a player succeeds the attempt. When using a 3 tier hierarchy structure you've the option to use a function with only Strings or to use a function with 3 Strings and an aditional integer as in the case above. 
+Use this when the player succeeds the attempt to progress. When using a three-tier structure you have the option to use a function of Strings only or a function composed of Strings and an integer value, as in the case above. 
 
 
 More information about *Progression Events* can be found [here](http://www.gameanalytics.com/docs/ga-data).
