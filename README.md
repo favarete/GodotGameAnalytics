@@ -1,9 +1,9 @@
 # GodotGameAnalytics
 
 This is an implementation of the [GameAnalytics](http://www.gameanalytics.com/) Android SDK for the 
-[Godot Game Engine](https://github.com/godotengine/godot)!
+[Godot Game Engine](https://godotengine.org)!
 
-The module works only on Android and has been tested with Godot-2.1.2-stable.
+The module works only on Android and has been tested with [Godot-2.1.2-stable](https://github.com/godotengine/godot/releases).
 
 ## Available Features
 > Design Event; 
