@@ -75,8 +75,8 @@ ___
 void sendCustomEvent(String stringHierarchy)
 ```
 The *stringHierarchy* is a String that can consist of 1-5 segments separated by ':'.  
-Each segment can have a max length of 32. 
-Eg: "Kill:Sword:Robot"
+Each segment can have a max length of 32.  
+Eg: "Kill:Sword:Robot"  
 
 
 **Design Event With Float Value**
