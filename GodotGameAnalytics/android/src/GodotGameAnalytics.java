@@ -5,6 +5,7 @@ import android.app.Activity;
 //import GameAnalytics SDK
 import com.gameanalytics.sdk.GameAnalytics;
 import com.gameanalytics.sdk.GAProgressionStatus;
+import com.gameanalytics.sdk.GAErrorSeverity;
 
 /**
  * Created by rodrigo favarete on April 2, 2017
@@ -26,12 +27,15 @@ public class GodotGameAnalytics extends Godot.SingletonBase
 
     public void init(String gaGameKey, String gaSecretKey) 
     {
-        if(!initialized) {
+        if(!initialized) 
+        {
             final String gameKey = gaGameKey;
             final String secretKey = gaSecretKey;
-            activity.runOnUiThread(new Runnable() {
+            activity.runOnUiThread(new Runnable() 
+            {
                 @Override 
-                public void run() {
+                public void run() 
+                {
                     initOnUiThread(gameKey, secretKey);
                 }
             });
@@ -54,7 +58,8 @@ public class GodotGameAnalytics extends Godot.SingletonBase
 
     public void sendCustomEvent(String eventHierarchy)
     {   
-        if(initialized) {
+        if(initialized) 
+        {
             GameAnalytics.addDesignEventWithEventId(eventHierarchy);
         }    
     }
@@ -65,7 +70,8 @@ public class GodotGameAnalytics extends Godot.SingletonBase
 
     public void sendCustomEventWithFloat(String eventHierarchy, float value)
     {   
-        if(initialized) {
+        if(initialized) 
+        {
             GameAnalytics.addDesignEventWithEventId(eventHierarchy, value);
         }    
     }
@@ -77,7 +83,8 @@ public class GodotGameAnalytics extends Godot.SingletonBase
 
     public void manualSessionHandling(boolean toggle)
     {
-        if(initialized) {
+        if(initialized) 
+        {
             GameAnalytics.setEnabledManualSessionHandling(toggle);
         }    
     }
@@ -89,7 +96,8 @@ public class GodotGameAnalytics extends Godot.SingletonBase
 
     public void startSession()
     {
-        if(initialized) {
+        if(initialized) 
+        {
             GameAnalytics.startSession();
         }    
     }
@@ -101,7 +109,8 @@ public class GodotGameAnalytics extends Godot.SingletonBase
 
     public void endSession()
     {
-        if(initialized) {
+        if(initialized) 
+        {
             GameAnalytics.endSession();
         }    
     }
@@ -110,20 +119,26 @@ public class GodotGameAnalytics extends Godot.SingletonBase
      * Progression Event Start. Use this when a player is starting a progression attempt
      */
 
-    public void progressionStart_1(String progression01){
-        if(initialized) {
+    public void progressionStart_1(String progression01)
+    {
+        if(initialized) 
+        {
             GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatus.Start, progression01);
         }
     }
 
-    public void progressionStart_2(String progression01, String progression02){
-        if(initialized) {
+    public void progressionStart_2(String progression01, String progression02)
+    {
+        if(initialized) 
+        {
             GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatus.Start, progression01, progression02);
         }
     }
 
-    public void progressionStart_3(String progression01, String progression02, String progression03){
-        if(initialized) {
+    public void progressionStart_3(String progression01, String progression02, String progression03)
+    {
+        if(initialized) 
+        {
             GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatus.Start, progression01, progression02, progression03);
         }
     }
@@ -133,26 +148,34 @@ public class GodotGameAnalytics extends Godot.SingletonBase
      * you can also pass an optional integer 
      */
 
-    public void progressionFail_1(String progression01){
-        if(initialized) {
+    public void progressionFail_1(String progression01)
+    {
+        if(initialized) 
+        {
             GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatus.Fail, progression01);
         }
     }
 
-    public void progressionFail_2(String progression01, String progression02){
-        if(initialized) {
+    public void progressionFail_2(String progression01, String progression02)
+    {
+        if(initialized) 
+        {
             GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatus.Fail, progression01, progression02);
         }
     }
 
-    public void progressionFail_3(String progression01, String progression02, String progression03){
-        if(initialized) {
+    public void progressionFail_3(String progression01, String progression02, String progression03)
+    {
+        if(initialized) 
+        {
             GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatus.Fail, progression01, progression02, progression03);
         }
     }
 
-    public void progressionFail_3_WithInt(String progression01, String progression02, String progression03, int score){
-        if(initialized) {
+    public void progressionFail_3_WithInt(String progression01, String progression02, String progression03, int score)
+    {
+        if(initialized) 
+        {
             GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatus.Fail, progression01, progression02, progression03, score);
         }
     }
@@ -162,27 +185,80 @@ public class GodotGameAnalytics extends Godot.SingletonBase
      * you can also pass an optional integer 
      */
 
-    public void progressionComplete_1(String progression01){
-        if(initialized) {
+    public void progressionComplete_1(String progression01)
+    {
+        if(initialized) 
+        {
             GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatus.Complete, progression01);
         }
     }
 
-    public void progressionComplete_2(String progression01, String progression02){
-        if(initialized) {
+    public void progressionComplete_2(String progression01, String progression02)
+    {
+        if(initialized) 
+        {
             GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatus.Complete, progression01, progression02);
         }
     }
 
-    public void progressionComplete_3(String progression01, String progression02, String progression03){
-        if(initialized) {
+    public void progressionComplete_3(String progression01, String progression02, String progression03)
+    {
+        if(initialized) 
+        {
             GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatus.Complete, progression01, progression02, progression03);
         }
     }
 
-    public void progressionComplete_3_WithInt(String progression01, String progression02, String progression03, int score){
-        if(initialized) {
+    public void progressionComplete_3_WithInt(String progression01, String progression02, String progression03, int score)
+    {
+        if(initialized) 
+        {
             GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatus.Complete, progression01, progression02, progression03, score);
+        }
+    }
+
+    /**
+     * Use this to track custom error events in your game. You can use the various severity level functions 
+     * and attach a message.
+     */
+
+    public void sendReportDebug(String debugMessage)
+    {
+        if(initialized)
+        {
+            GameAnalytics.addErrorEventWithSeverity(GAErrorSeverity.Debug, debugMessage);
+        }
+    }
+
+    public void sendReportInfo(String infoMessage)
+    {
+        if(initialized)
+        {
+            GameAnalytics.addErrorEventWithSeverity(GAErrorSeverity.Info, infoMessage);
+        }
+    }
+
+    public void sendReportWarning(String warningMessage)
+    {
+        if(initialized)
+        {
+            GameAnalytics.addErrorEventWithSeverity(GAErrorSeverity.Warning, warningMessage);
+        }
+    }
+
+    public void sendReportError(String errorMessage)
+    {
+        if(initialized)
+        {
+            GameAnalytics.addErrorEventWithSeverity(GAErrorSeverity.Error, errorMessage);
+        }
+    }
+
+    public void sendReportCriticalError(String criticalErrorMessage)
+    {
+        if(initialized)
+        {
+            GameAnalytics.addErrorEventWithSeverity(GAErrorSeverity.Critical, criticalErrorMessage);
         }
     }
 
@@ -222,7 +298,12 @@ public class GodotGameAnalytics extends Godot.SingletonBase
             "progressionComplete_1",
             "progressionComplete_2",
             "progressionComplete_3",
-            "progressionComplete_3_WithInt"
+            "progressionComplete_3_WithInt",
+            "sendReportDebug",
+            "sendReportInfo",
+            "sendReportWarning",
+            "sendReportError",
+            "sendReportCriticalError"
         });
 
         this.activity = activity;
