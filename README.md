@@ -117,10 +117,10 @@ Use this when the player fails the attempt to progress. When using a three-tier 
 **Progression Event Complete**
 
 ```GDScript
-void progressionFail_1(String progression01)
-void progressionFail_2(String progression01, String progression02)
-void progressionFail_3(String progression01, String progression02, String progression03)
-void progressionFail_3_WithInt(String progression01, String progression02, String progression03, int score)
+void progressionComplete_1(String progression01)
+void progressionComplete_2(String progression01, String progression02)
+void progressionComplete_3(String progression01, String progression02, String progression03)
+void progressionComplete_3_WithInt(String progression01, String progression02, String progression03, int score)
 ```
 Use this when the player succeeds the attempt to progress. When using a three-tier structure you have the option to use a function of Strings only or a function composed of Strings and an integer value, as in the case above. 
 
