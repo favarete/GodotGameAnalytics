@@ -28,7 +28,7 @@ modules="org/godotengine/godot/GodotGameAnalytics"
 3. **[optional]** The mandatory permissions are already configured. Information about additional permissions, as well as their advantages and disadvantages can be found [here](https://github.com/GameAnalytics/GA-SDK-ANDROID/wiki/Configure-Android-Studio#storage-permissions) and [here](https://github.com/GameAnalytics/GA-SDK-ANDROID/wiki/Configure-Android-Studio#optional-fallback-option-for-identifier-imei).
 
 ## Initialize GodotGameAnalytics
-To to use the module functions on your scripts, start the module as follows: 
+To use the module functions on your scripts, start the module as follows: 
 
 (You can [Sign Up](https://go.gameanalytics.com/signup) for free to get the keys).
 
